@@ -1,0 +1,91 @@
+ext {
+    nav_version_sdk = "2.5.3"
+    koin_version_sdk = "3.1.0"
+    lifecycle_version_sdk = "2.5.1"
+    coroutine_version_sdk = "1.6.4"
+    okHttp3_version_sdk = "4.9.2"
+    retrofit_version_sdk = "2.9.0"
+    room_version_sdk = "2.4.3"
+    camerax_version_sdk = "1.1.0-beta01"
+    gms_version_sdk = "21.0.1"
+    face_detection_version_sdk = "16.1.5"
+    glide_version_sdk = "4.12.0"
+    moshi_version_sdk = "1.12.0"
+}
+
+android {
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+kotlin {
+    jvmToolchain {
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // -- NAVIGATION --
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version_sdk"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version_sdk"
+
+    // --- DEPENDENCY INJECTION ---
+    // Koin
+    implementation "io.insert-koin:koin-core:$koin_version_sdk"
+    implementation "io.insert-koin:koin-android:$koin_version_sdk"
+
+    // --- LIVE DATA ---
+    // Livedata
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version_sdk" //asLiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version_sdk" // viewModel
+
+    // -- COROUTINES --
+    // Coroutines Android
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version_sdk"
+
+    // -- OK HTTP3 --
+    implementation "com.squareup.okhttp3:okhttp:$okHttp3_version_sdk"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okHttp3_version_sdk"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3_version_sdk"
+
+    // Retrofit Dependency
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version_sdk"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version_sdk"
+
+    // -- ROOM --
+    implementation "androidx.room:room-runtime:$room_version_sdk"
+    implementation "androidx.room:room-ktx:$room_version_sdk"
+    annotationProcessor "androidx.room:room-compiler:$room_version_sdk"
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version_sdk"
+
+    // -- CAMERAX--
+    implementation "androidx.camera:camera-camera2:$camerax_version_sdk"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version_sdk"
+    implementation "androidx.camera:camera-view:$camerax_version_sdk"
+
+    // -- LOCATION --
+    implementation "com.google.android.gms:play-services-location:$gms_version_sdk"
+
+    // -- FACE DETECTION --
+    implementation "com.google.mlkit:face-detection:$face_detection_version_sdk"
+
+    // --- GLIDE ---
+    implementation "com.github.bumptech.glide:glide:$glide_version_sdk"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glide_version_sdk"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version_sdk"
+
+    // ZXING
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.google.zxing:core:3.3.0'
+}
