@@ -3,6 +3,22 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/PTNUSASATUINTIARTHA-DOKU/doku-wallet-android-core-sdk"
+            credentials {
+                username = "your_user_name"
+                password = "your_password_or_pat"
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/PTNUSASATUINTIARTHA-DOKU/doku-wallet-android-sdk"
+            credentials {
+                username = "your_user_name"
+                password = "your_password_or_pat"
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +26,22 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/PTNUSASATUINTIARTHA-DOKU/doku-wallet-android-core-sdk"
+            credentials {
+                username = "your_user_name"
+                password = "your_password_or_pat"
+            }
+        }
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/PTNUSASATUINTIARTHA-DOKU/doku-wallet-android-sdk"
+            credentials {
+                username = "your_user_name"
+                password = "your_password_or_pat"
+            }
+        }
     }
 }
 
